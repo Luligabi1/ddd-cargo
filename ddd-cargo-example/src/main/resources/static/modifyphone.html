@@ -27,21 +27,21 @@
                             p-id="8873" data-spm-anchor-id="a313x.7781069.0.i8" fill="#666"></path>
                     </svg>
                 </a>
-                修改发件人手机号
+                Modificar número do remetente
             </div>
 
         </div>
         <div id="main">
             <div class="form" action="" method="post">
                 <div>
-                    <div class="label">发件人: </div>
+                    <div class="label">Número do remetente: </div>
                     <div><input type="text" id="senderphone" /></div>
                 </div>
 
                 <div>
                     <div class="label"></div>
                     <div><button onclick="modify()">
-                            修改
+                            Editar
                         </button></div>
                 </div>
 
@@ -66,7 +66,7 @@
             var senderphone = senderPhoneElement.value;
 
             if (!senderphone) {
-                alert("Please input sender phone");
+                alert("Insira o número do remetente");
                 return;
             }
 
@@ -86,7 +86,7 @@
                         var text = xmlhttp.responseText;
                         alert(text);
                     } else {
-                        alert("修改成功");
+                        alert("Sucesso");
                         location.href = "/index.html";
                     }
                 }

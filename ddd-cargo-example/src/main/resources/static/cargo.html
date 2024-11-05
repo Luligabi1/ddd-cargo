@@ -27,17 +27,17 @@
                             p-id="8873" data-spm-anchor-id="a313x.7781069.0.i8" fill="#666"></path>
                     </svg>
                 </a>
-                Cargo详情
+                Detalhes da encomenda
             </div>
         </div>
         <div id="main">
             <div id="info">
-                <div id="cargoId">单号：</div>
-                <div id="senderPhone">发件人：</div>
-                <div id="description">描述：</div>
-                <div id="delivery">目的地：</div>
+                <div id="cargoId">ID da encomenda:</div>
+                <div id="senderPhone">Número do remetente:</div>
+                <div id="description">Descrição:</div>
+                <div id="delivery">Destino:</div>
             </div>
-            <h1 style="border-bottom: 1px solid #ccc;padding:24px 0 8px">单号追踪</h1>
+            <h1 style="border-bottom: 1px solid #ccc;padding:24px 0 8px">Número de rastreamento</h1>
             <div id="event">
                 <ul id="eventele">
                     <!-- <li><svg t="1553248152518" class="icon"
@@ -92,10 +92,10 @@
                 var text = xmlhttp.responseText;
                 var cargoEvent = JSON.parse(text);
                 console.log(cargoEvent);
-                document.getElementById("cargoId").innerHTML = "单号：" + cargoEvent.cargo.id;
-                document.getElementById("senderPhone").innerHTML = "发件人：" + cargoEvent.cargo.senderPhone;
-                document.getElementById("description").innerHTML = "描述：" + cargoEvent.cargo.description;
-                document.getElementById("delivery").innerHTML = "目的地：" + cargoEvent.cargo.originLocationName + " to " + cargoEvent.cargo.destinationLocationName;
+                document.getElementById("cargoId").innerHTML = "ID da encomenda: " + cargoEvent.cargo.id;
+                document.getElementById("senderPhone").innerHTML = "Número do remetente: " + cargoEvent.cargo.senderPhone;
+                document.getElementById("description").innerHTML = "Descrição: " + cargoEvent.cargo.description;
+                document.getElementById("delivery").innerHTML = "Destino: " + cargoEvent.cargo.originLocationName + " to " + cargoEvent.cargo.destinationLocationName;
 
                 var events = cargoEvent.events;
                 var eventElement = document.getElementById("eventele");
@@ -116,7 +116,7 @@
                         '</svg>' + show + '</li>';
                 });
                 if (!events || events.length == 0) {
-                    eventElement.innerHTML = '<li>暂无物流信息</li>';
+                    eventElement.innerHTML = '<li>Dados indisponíveis!</li>';
                 }
             }
         });

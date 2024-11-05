@@ -27,28 +27,24 @@
                             p-id="8873" data-spm-anchor-id="a313x.7781069.0.i8" fill="#666"></path>
                     </svg>
                 </a>
-                修改目的地
+                Modificar destino
             </div>
 
         </div>
         <div id="main">
             <div class="form">
                 <div>
-                    <div class="label">发送地: </div>
-                    <div>杭州</div>
-                </div>
-                <div>
-                    <div class="label">目的地: </div>
+                    <div class="label">Destino: </div>
                     <div><select id="destinationLocation">
-                            <!-- <option value="NJ">南京</option>
-                            <option value="BJ">北京</option> -->
+                            <!-- <option value="AM">AM</option>
+                            <option value="PR">PR</option> -->
                         </select></div>
                 </div>
 
                 <div>
                     <div class="label"></div>
                     <div><button onclick="modify()">
-                            修改
+                            Alterar
                         </button></div>
                 </div>
 
@@ -87,7 +83,7 @@
             var destinationLocation = destinationLocationElement.value;
 
             if (!destinationLocation) {
-                alert("Please select destinationLocation");
+                alert("Selecione o destino");
                 return;
             }
 
@@ -107,7 +103,7 @@
                         var text = xmlhttp.responseText;
                         alert(text);
                     } else {
-                        alert("修改成功");
+                        alert("Sucesso!");
                         location.href = "/index.html";
                     }
                 }

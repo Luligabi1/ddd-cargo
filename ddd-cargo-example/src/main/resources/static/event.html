@@ -27,37 +27,37 @@
                             p-id="8873" data-spm-anchor-id="a313x.7781069.0.i8" fill="#666"></path>
                     </svg>
                 </a>
-                添加单号处理事件
+                Adicionar atualização
             </div>
 
         </div>
         <div id="main">
             <div class="form">
                 <div>
-                    <div class="label">单号: </div>
+                    <div class="label">Número de encomenda: </div>
                     <div id="cargoId"></div>
                 </div>
                 <div>
-                    <div class="label">事件类型: </div>
+                    <div class="label">Tipo de evento: </div>
                     <div><select name="" id="eventType" value="">
-                            <option value="0">接受货物</option>
-                            <option value="1">装载</option>
-                            <option value="2">卸载</option>
-                            <option value="3">送达</option>
+                            <option value="0">Enviado para a transportadora</option>
+                            <option value="1">Carregamento</option>
+                            <option value="2">Descarregamento</option>
+                            <option value="3">Entregue</option>
                         </select></div>
                 </div>
 
                 <div>
-                    <div class="label">选择调度班次: </div>
+                    <div class="label">Selecione: </div>
                     <div><select name="" id="carrier">
-                            <!-- <option value="NJ">HN001：杭州 to 南京</option>
-                            <option value="BJ">NB137：南京 to 北京</option> -->
+                            <!-- <option value="NJ">HN001：杭州 para 南京</option>
+                            <option value="BJ">NB137：南京 para 北京</option> -->
                         </select></div>
                 </div>
                 <div>
                     <div class="label"></div>
                     <div><button onclick="addEvent()">
-                            保存
+                            Salvar
                         </button></div>
                 </div>
 
@@ -74,10 +74,10 @@
                 var text = xmlhttp.responseText;
                 var locations = JSON.parse(text);
                 var mainElement = document.getElementById("carrier");
-                mainElement.innerHTML = "<option value=''>无</option>";
+                mainElement.innerHTML = "<option value=''>-</option>";
                 locations.forEach(element => {
                     mainElement.innerHTML = mainElement.innerHTML
-                        + '<option value="' + element.scheduleId + '">' + element.scheduleId + ' ' + element.fromLocationName + ' to ' + element.toLocationName + '</option>';
+                        + '<option value="' + element.scheduleId + '">' + element.scheduleId + ' ' + element.fromLocationName + ' para ' + element.toLocationName + '</option>';
                 });
             }
         });
@@ -115,7 +115,7 @@
                         var text = xmlhttp.responseText;
                         alert(text);
                     } else {
-                        alert("事件添加成功");
+                        alert("Sucesso!");
                         location.href = "/cargo.html?cargoId=" + cargoId;
                     }
                 }

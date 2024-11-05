@@ -20,10 +20,10 @@
             <div class="header">
                 Cargo Management System
             </div>
-            <input id="search" type="search" placeholder="输入发件人搜索" onchange="search()" />
+            <input id="search" type="search" placeholder="Pesquisar remetente" onchange="search()" />
             <button class="tool" onclick="Javascript:location.href='booking.html'"
                 title="switch horizontal or vertial chart">
-                预订货物
+                Agendar
             </button>
         </div>
         <div id="main">
@@ -31,7 +31,7 @@
                 <div>CARGO-NO-16193</div>
                 <div>1590000</div>
                 <div>香蕉、苹果和梨子</div>
-                <div>杭州 to 北京</div>
+                <div>杭州 para 北京</div>
                 <div>
                     <button class="button_small" onclick="Javascript:location.href='modifyphone.html?cargoId=1678'">
                         修改发送人
@@ -73,21 +73,21 @@
                             '<div style="width:15%">' + element.id + '</div>' +
                             '<div style="width:10%">' + element.senderPhone + '</div>' +
                             '<div style="width:15%">' + element.description + '</div>' +
-                            '<div style="width:14%">' + element.originLocationName + ' to ' + element.destinationLocationName + '</div>' +
+                            '<div style="width:14%">' + element.originLocationName + ' para ' + element.destinationLocationName + '</div>' +
                             '<div>' +
                             '   <button class="button_small" onclick="Javascript:location.href=\'modifyphone.html?cargoId=' + element.id + '\'">' +
-                            '修改发送人' +
+                            'Modificar número do remetente' +
                             '</button>' +
                             '<button class="button_small" onclick="Javascript:location.href=\'modifydelivery.html?cargoId=' + element.id + '\'">' +
-                            '修改目的地' +
+                            'Modificar destino' +
                             '</button>' +
                             '<button class="button_small" style="background-color: bisque" ' +
                             'onclick="Javascript:location.href=\'event.html?cargoId=' + element.id + '\'">' +
-                            '添加处理事件' +
+                            'Adicionar atualização' +
                             '</button>' +
                             '<button class="button_small" style="background-color: bisque"' +
                             'onclick="Javascript:location.href=\'cargo.html?cargoId=' + element.id + '\'">' +
-                            '追踪单号' +
+                            'Detalhes' +
                             '</button>' +
                             '</div>' +
                             '</div>';

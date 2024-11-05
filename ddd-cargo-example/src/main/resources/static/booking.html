@@ -27,35 +27,35 @@
                             p-id="8873" data-spm-anchor-id="a313x.7781069.0.i8" fill="#666"></path>
                     </svg>
                 </a>
-                预订货物
+                Agendar
             </div>
 
         </div>
         <div id="main">
             <div class="form" action="" method="post">
                 <div>
-                    <div class="label">发件人: </div>
+                    <div class="label">Número do remetente: </div>
                     <div><input type="text" id="senderphone" /></div>
                 </div>
                 <div>
-                    <div class="label">货物描述: </div>
+                    <div class="label">Descrição: </div>
                     <div><input type="text" id="description" /></div>
                 </div>
                 <div>
-                    <div class="label">发送地: </div>
-                    <div>杭州</div>
+                    <div class="label">Origem: </div>
+                    <div>SP</div>
                 </div>
                 <div>
-                    <div class="label">目的地: </div>
+                    <div class="label">Destino: </div>
                     <div><select id="destinationLocation">
-                            <!-- <option value="NJ">南京</option>
-                            <option value="BJ">北京</option> -->
+                            <!-- <option value="AM">AM</option>
+                            <option value="PR">PR</option> -->
                         </select></div>
                 </div>
                 <div>
                     <div class="label"></div>
                     <div><button onclick="book()">
-                            预订
+                            Reservar
                         </button></div>
                 </div>
 
@@ -69,25 +69,25 @@
             var senderphone = document.getElementById("senderphone").value;
             var description = document.getElementById("description").value;
             var destinationLocation = document.getElementById("destinationLocation").value;
-            var originLocation = 'HZ';
+            var originLocation = 'SP';
 
             if (!senderphone) {
-                alert("Please input sender phone");
+                alert("Insira o número do remetente");
                 return;
             }
 
             if (!description) {
-                alert("Please input description");
+                alert("Insira a descrição");
                 return;
             }
             if (!destinationLocation) {
-                alert("Please select destinationLocation");
+                alert("Selecione o destino");
                 return;
             }
             var data = {
                 senderPhone: senderphone,
                 description: description,
-                originLocationCode: 'HZ',
+                originLocationCode: 'SP',
                 destinationLocationCode: destinationLocation
             };
 
@@ -104,7 +104,7 @@
                         var text = xmlhttp.responseText;
                         alert(text);
                     } else {
-                        alert("预订成功");
+                        alert("Sucesso");
                         location.href = "/index.html";
                     }
                 }

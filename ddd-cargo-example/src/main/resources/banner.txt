@@ -1,1 +1,1 @@
-:: domain-model driven design cargo demo by Sayi ::        (http://deepoove.com)
+Exemplo para apresentação da disciplina de TDS
